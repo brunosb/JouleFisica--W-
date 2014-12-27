@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trabalho.controles.PrincipalController">
+   <left>
+      <AnchorPane prefWidth="110.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="BotoesMenu" layoutX="15.0" layoutY="11.0" prefHeight="442.0" prefWidth="80.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="11.0">
+               <children>
+                  <Button fx:id="forca" layoutX="15.0" layoutY="20.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0" AnchorPane.bottomAnchor="373.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="20.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="70.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="/img/Menu-forca.PNG" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="peso" layoutX="15.0" layoutY="111.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="61.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/img/peso.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="hook" layoutX="15.0" layoutY="200.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="70.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/img/Menu-hook.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="graficos" layoutX="15.0" layoutY="289.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="70.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/img/Menu-graf.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="estudo" layoutX="15.0" layoutY="379.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="80.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="70.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/img/Menu-estudo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fx:id="menuSelecao" fitHeight="59.0" fitWidth="74.0" layoutX="85.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/Menu-selecao.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <FlowPane prefHeight="33.0" BorderPane.alignment="CENTER">
+         <children>
+          <AnchorPane />
+            <Label fx:id="nomeAluno" text="Nome:">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="30.0" />
+               </FlowPane.margin>
+            </Label>
+            <Label fx:id="anoAluno" text="Ano:">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="40.0" />
+               </FlowPane.margin>
+            </Label>
+         </children>
+      </FlowPane>
+   </top>
+   <center>
+      <AnchorPane fx:id="conteudoTelas" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

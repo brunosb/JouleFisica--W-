@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="/css/Hook.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trabalho.controles.HookController">
+   <top>
+      <AnchorPane prefHeight="65.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="29.0" layoutY="16.0" text="Força Elástica = Constante da Mola (K) * Deformação (X)" AnchorPane.bottomAnchor="15.0" AnchorPane.topAnchor="16.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="585.0" layoutY="16.0" text="Trabalho =" AnchorPane.topAnchor="13.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="717.0" layoutY="33.0" text="2" AnchorPane.topAnchor="33.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="695.0" layoutY="16.0" prefHeight="31.0" prefWidth="59.0" text="K * X²" underline="true" AnchorPane.topAnchor="13.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AreaChart fx:id="graficoFelastica" layoutX="14.0" layoutY="279.0" legendSide="RIGHT" prefHeight="251.0" prefWidth="408.0" title="Grafico do Trabalho (W)">
+              <xAxis>
+                <NumberAxis label="Deformação" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Força Elástica" side="LEFT" />
+              </yAxis>
+            </AreaChart>
+            <ImageView fitHeight="194.0" fitWidth="391.0" layoutX="82.0" layoutY="20.0" pickOnBounds="true">
+               <image>
+                  <Image url="/img/mola.PNG" />
+               </image>
+            </ImageView>
+            <Label fx:id="resulFelastica" layoutX="480.0" layoutY="239.0" text="F_elástica = ">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="resulTrabalhoFelastica" layoutX="480.0" layoutY="295.0" text="Trabalho (W) = ">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="194.0" layoutX="38.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="44.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#baff1f" />
+                        <Stop color="#282323" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="25.0" layoutX="38.0" layoutY="214.0" stroke="BLACK" strokeType="INSIDE" width="437.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#baff1f" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefWidth="210.0" style="-fx-border-color: black;" styleClass="background-dados" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="125.0" styleClass="label-dados" text="K:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="222.0" styleClass="label-dados" text="X:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtK" layoutX="31.0" layoutY="121.0" prefWidth="100.0" styleClass="campo-dados">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtX" layoutX="31.0" layoutY="218.0" prefWidth="100.0" styleClass="campo-dados">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnCalcular" contentDisplay="TOP" layoutX="55.0" layoutY="479.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" styleClass="botao" text="Calcular" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="486.0">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/Calculator-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="131.0" layoutY="132.0" styleClass="label-dados" text="N/m">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="131.0" layoutY="227.0" styleClass="label-dados" text="m">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

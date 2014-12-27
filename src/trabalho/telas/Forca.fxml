@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="background" stylesheets="/css/Forca.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trabalho.controles.ForcaController">
+   <left>
+      <AnchorPane prefWidth="210.0" style="-fx-border-color: black;" styleClass="background-dados" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="8.0" layoutY="33.0" styleClass="label-dados" text="Força Resultante:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="73.0" styleClass="label-dados" text="Força Favor:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="116.0" styleClass="label-dados" text="Força Contrária:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="160.0" styleClass="label-dados" text="Força Ângulo:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="378.0" styleClass="label-dados" text="Ângulo:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="333.0" styleClass="label-dados" text="Distância:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFresultante" layoutX="128.0" layoutY="31.0" prefWidth="45.0" styleClass="campo-dados" />
+            <TextField fx:id="txtFfavor" layoutX="93.0" layoutY="71.0" prefWidth="45.0" styleClass="campo-dados" />
+            <TextField fx:id="txtFcontra" layoutX="121.0" layoutY="114.0" prefWidth="45.0" styleClass="campo-dados" />
+            <TextField fx:id="txtFangulo" layoutX="107.0" layoutY="158.0" prefWidth="45.0" styleClass="campo-dados" />
+            <TextField fx:id="txtdistancia" layoutX="78.0" layoutY="331.0" prefWidth="45.0" styleClass="campo-dados" />
+            <TextField fx:id="txtangulo" layoutX="65.0" layoutY="376.0" prefWidth="45.0" styleClass="campo-dados" />
+            <Button fx:id="btnCalcular" contentDisplay="TOP" layoutX="50.0" layoutY="486.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" styleClass="botao" text="Calcular" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="486.0">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/Calculator-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="173.0" layoutY="35.0" styleClass="label-dados" text="N" />
+            <Label layoutX="138.0" layoutY="75.0" styleClass="label-dados" text="N" />
+            <Label layoutX="166.0" layoutY="118.0" styleClass="label-dados" text="N" />
+            <Label layoutX="152.0" layoutY="162.0" styleClass="label-dados" text="N" />
+            <Label layoutX="124.0" layoutY="335.0" styleClass="label-dados" text="m" />
+            <Label layoutX="110.0" layoutY="380.0" styleClass="label-dados" text="º" />
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <ToggleButton fx:id="ForcaFavor" contentDisplay="GRAPHIC_ONLY" layoutX="60.0" layoutY="17.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="34.0" text="Força a Favor" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="18.0">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/Forca-Favor.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="ForcaContraria" contentDisplay="GRAPHIC_ONLY" layoutX="150.0" layoutY="19.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="41.0" text="Força Contrária" AnchorPane.bottomAnchor="13.0" AnchorPane.topAnchor="18.0">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/Forca-Contra.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ToggleButton fx:id="ForcaAngulo" contentDisplay="GRAPHIC_ONLY" layoutX="293.0" layoutY="19.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="44.0" text="Força Ângulo" AnchorPane.bottomAnchor="13.0" AnchorPane.topAnchor="18.0">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/Forca-Angulo.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <Label layoutX="668.0" layoutY="31.0" text="Trabalho = Força * Distância * Cosseno()" AnchorPane.bottomAnchor="13.0" AnchorPane.topAnchor="18.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="avisoSelecionar" layoutX="185.0" layoutY="4.0" text="Selecione a cima as Forças que deseja usar!" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="4.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Line endX="500.0" layoutX="216.0" layoutY="428.0" startX="-100.0" />
+            <Polygon fill="#171717" layoutX="732.0" layoutY="438.0" rotate="90.0" scaleX="0.3" scaleY="0.3" stroke="BLACK" strokeType="INSIDE">
+              <points>
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
+              </points>
+            </Polygon>
+            <Line endX="150.0" layoutX="217.0" layoutY="474.0" startX="-100.0" />
+            <Line endX="150.0" layoutX="566.0" layoutY="473.0" startX="-100.0" />
+            <Line endX="20.0" layoutX="106.0" layoutY="473.0" rotate="90.0" />
+            <Line endX="20.0" layoutX="708.0" layoutY="472.0" rotate="90.0" />
+            <Label fx:id="lblMetros" alignment="CENTER" layoutX="378.0" layoutY="463.0" prefHeight="17.0" prefWidth="77.0" text="metros">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Rectangle fx:id="bloco" arcHeight="5.0" arcWidth="5.0" height="93.0" layoutX="344.0" layoutY="336.0" stroke="BLACK" strokeType="INSIDE" width="145.0">
+               <fill>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0" startX="0.6285714285714286" startY="0.26666666666666666">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#cfce17" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <effect>
+                  <DropShadow color="#070707" height="15.07" offsetX="-3.0" offsetY="-2.0" radius="7.035" width="15.07" />
+               </effect>
+            </Rectangle>
+            <Line fx:id="lineContra" endX="50.0" layoutX="560.0" layoutY="383.0" startX="-50.0" />
+            <Polygon fx:id="pontaLineContra" fill="#ff2121" layoutX="499.0" layoutY="393.0" rotate="-90.0" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+               </points>
+            </Polygon>
+            <Polygon fx:id="pontaLineFavor" fill="#1f74ff" layoutX="329.0" layoutY="393.0" rotate="90.0" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE">
+              <points>
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
+              </points>
+            </Polygon>
+            <Line fx:id="lineFavor" endX="100.0" layoutX="218.0" layoutY="383.0" />
+            <Polygon fx:id="pontaLineAngulo" fill="#1f74ff" layoutX="507.0" layoutY="270.0" rotate="51.3" scaleX="0.2" scaleY="0.2" stroke="BLACK" strokeType="INSIDE">
+               <points>
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
+               </points>
+            </Polygon>
+            <Line fx:id="lineAngulo" endX="60.0" layoutX="449.0" layoutY="300.0" rotate="-38.7" startX="-50.0" />
+            <Label fx:id="resultado" layoutX="387.0" layoutY="89.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

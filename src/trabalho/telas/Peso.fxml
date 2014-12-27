@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane stylesheets="/css/Peso.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trabalho.controles.PesoController">
+   <top>
+      <AnchorPane prefHeight="65.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton fx:id="formula1" layoutX="58.0" layoutY="24.0" mnemonicParsing="false" text="W = Peso * /\H" AnchorPane.bottomAnchor="13.0" AnchorPane.topAnchor="18.0">
+               <toggleGroup>
+                  <ToggleGroup fx:id="formulaPeso" />
+               </toggleGroup>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="formula2" layoutX="320.0" layoutY="18.0" mnemonicParsing="false" text="W = Massa * Gravidade * /\H" toggleGroup="$formulaPeso" AnchorPane.bottomAnchor="13.0" AnchorPane.topAnchor="18.0">
+               <font>
+                  <Font size="20.0" />
+               </font></RadioButton>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefWidth="210.0" style="-fx-border-color: black;" styleClass="background-dados" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="41.0" styleClass="label-dados" text="Peso:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="89.0" styleClass="label-dados" text="Massa:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="137.0" styleClass="label-dados" text="Gravidade:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="192.0" styleClass="label-dados" text="/\ Altura:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPeso" layoutX="59.0" layoutY="39.0" prefWidth="45.0" styleClass="campo-dados" />
+            <TextField fx:id="txtMassa" layoutX="61.0" layoutY="87.0" prefWidth="45.0" styleClass="campo-dados" />
+            <TextField fx:id="txtGravidade" layoutX="91.0" layoutY="135.0" prefWidth="45.0" styleClass="campo-dados" />
+            <TextField fx:id="txtAltura" layoutX="77.0" layoutY="190.0" prefWidth="45.0" styleClass="campo-dados" />
+            <Button fx:id="btnCalcular" contentDisplay="TOP" layoutX="56.0" layoutY="482.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" styleClass="botao" text="Calcular" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="486.0">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/Calculator-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="108.0" layoutY="43.0" styleClass="label-dados" text="N" />
+            <Label layoutX="108.0" layoutY="91.0" styleClass="label-dados" text="Kg" />
+            <Label layoutX="142.0" layoutY="139.0" styleClass="label-dados" text="m/s²" />
+            <Label layoutX="128.0" layoutY="194.0" styleClass="label-dados" text="m" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Group layoutX="-1.0" layoutY="-8.0">
+               <children>
+                  <Circle fx:id="cBola" radius="100.0" scaleX="0.125" scaleY="0.125" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="0.23333333333333334">
+                           <stops>
+                              <Stop color="#dbaf12" />
+                              <Stop color="#252020" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Polygon fill="#101111" layoutX="238.0" layoutY="546.0" rotate="180.0" scaleX="0.1" scaleY="0.1" stroke="BLACK" strokeType="INSIDE">
+                    <points>
+                      <Double fx:value="-50.0" />
+                      <Double fx:value="40.0" />
+                      <Double fx:value="50.0" />
+                      <Double fx:value="40.0" />
+                      <Double fx:value="0.0" />
+                      <Double fx:value="-60.0" />
+                    </points>
+                  </Polygon>
+                  <Line fx:id="lnCaminho" endX="300.0" layoutX="138.0" layoutY="330.0" rotate="90.0" startX="-100.0" stroke="#3a9ed3" strokeDashOffset="5.0" />
+                  <Rectangle arcHeight="100.0" arcWidth="20.0" height="390.0" layoutX="44.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="32.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2b3843" />
+                              <Stop color="#ebf265" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="20.0" height="392.0" layoutX="52.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="169.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#2b3843" />
+                              <Stop color="#ebf265" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bedded" height="42.0" layoutX="66.0" layoutY="185.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bedded" height="42.0" layoutX="156.0" layoutY="185.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bedded" height="42.0" layoutX="158.0" layoutY="254.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bedded" height="42.0" layoutX="68.0" layoutY="254.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bedded" height="42.0" layoutX="157.0" layoutY="324.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bedded" height="42.0" layoutX="159.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bedded" height="42.0" layoutX="67.0" layoutY="324.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bedded" height="42.0" layoutX="69.0" layoutY="393.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bedded" height="42.0" layoutX="95.0" layoutY="499.0" stroke="BLACK" strokeType="INSIDE" width="84.0" />
+                  <Line endX="20.0" layoutX="192.0" layoutY="138.0" rotate="-61.4" />
+                  <Line endX="20.0" layoutX="205.0" layoutY="139.0" rotate="-102.5" />
+                  <Line endX="20.0" layoutX="202.0" layoutY="118.0" rotate="-74.7" />
+                  <Line endX="20.0" layoutX="213.0" layoutY="116.0" rotate="7.1" />
+                  <Line endX="20.0" layoutX="212.0" layoutY="121.0" />
+                  <Ellipse fill="#242425" layoutX="215.0" layoutY="100.0" radiusX="75.0" radiusY="80.0" scaleX="0.1" scaleY="0.1" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </Group>
+            <AreaChart fx:id="graficoFpeso" layoutX="303.0" layoutY="230.0" legendSide="RIGHT" prefHeight="293.0" prefWidth="396.0" title="Trabalho do Peso (W)">
+              <xAxis>
+                <NumberAxis label="Altura" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Peso" side="LEFT" />
+              </yAxis>
+            </AreaChart>
+            <Label fx:id="resultado" layoutX="347.0" layoutY="75.0" text="Resultado">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="selecionarAcima" layoutX="255.0" layoutY="6.0" text="Escolha uma das formulas a cima!!!" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="4.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

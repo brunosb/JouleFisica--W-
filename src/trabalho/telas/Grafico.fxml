@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane stylesheets="/css/Grafico.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trabalho.controles.GraficoController">
+   <left>
+      <AnchorPane prefWidth="220.0" style="-fx-border-color: black;" styleClass="background-dados" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="23.0" layoutY="20.0" prefHeight="26.0" prefWidth="174.0" styleClass="label-dados" text="Adicione os Pontos no Gráfico" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="97.0" styleClass="label-dados" text="X:" />
+            <Label layoutX="110.0" layoutY="97.0" styleClass="label-dados" text="Y:" />
+            <TextField fx:id="txtX" layoutX="31.0" layoutY="93.0" prefWidth="60.0" styleClass="campo-dados" />
+            <TextField fx:id="txtY" layoutX="127.0" layoutY="93.0" prefWidth="60.0" styleClass="campo-dados" />
+            <Button fx:id="btnAdicionar" layoutX="84.0" layoutY="132.0" mnemonicParsing="false" styleClass="botao" text="+" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="94.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ScrollPane layoutX="10.0" layoutY="204.0" prefHeight="302.0" prefWidth="200.0">
+              <content>
+                <AnchorPane>
+                     <children>
+                        <TableView fx:id="tbvCordenadas" layoutX="3.0" layoutY="5.0" prefWidth="173.0">
+                          <columns>
+                            <TableColumn fx:id="colunaX" editable="false" prefWidth="91.0" resizable="false" sortable="false" text="X" />
+                            <TableColumn fx:id="colunaY" editable="false" resizable="false" sortable="false" text="Y" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Button fx:id="btnLimparTabela" layoutX="14.0" layoutY="176.0" mnemonicParsing="false" styleClass="botao" text="Limpar" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <AreaChart fx:id="graficoGeral" layoutX="16.0" layoutY="108.0" title="Gráfico (W)">
+              <xAxis>
+                <NumberAxis label="Distância (m)" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Força (N)" side="LEFT" />
+              </yAxis>
+            </AreaChart>
+            <Button fx:id="btnCalcular" contentDisplay="TOP" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="86.0" styleClass="botao" text="Calcular">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="/img/Calculator-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="292.0" layoutY="14.0" text="Trabalho (W) = ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtResultado" editable="false" layoutX="431.0" layoutY="7.0" prefHeight="25.0" prefWidth="100.0">
+               <font>
+                  <Font size="20.0" />
+               </font></TextField>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

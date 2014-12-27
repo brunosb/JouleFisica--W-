@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="fundoLogin" styleClass="background" stylesheets="/css/Login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trabalho.controles.FXMLLoginController">
+   <children>
+      <Ellipse fx:id="fundoElipse" layoutX="246.0" layoutY="198.0" radiusX="238.0" radiusY="186.0" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <RadialGradient centerX="0.8333333333333335" centerY="0.4999999999999999" focusDistance="0.6976744186046511" radius="0.3953488372093023">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#63d1e0" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+         <effect>
+            <Lighting diffuseConstant="0.86" specularConstant="2.0" specularExponent="12.56" surfaceScale="2.78">
+               <bumpInput>
+                  <Shadow height="32.86" radius="18.895" width="44.72" />
+               </bumpInput>
+               <light>
+                  <Light.Distant azimuth="46.05" color="#f5faf9" />
+               </light>
+            </Lighting>
+         </effect>
+      </Ellipse>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="82.0" layoutX="205.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" width="109.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.4714285714285714" startY="0.44285714285714284">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="0.007662835249042145" />
+                  <Stop color="#dcf806" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Line endX="240.0" layoutX="230.0" layoutY="201.0" startX="100.0" />
+      <Line endX="-240.0" layoutX="289.0" layoutY="199.0" startX="-100.0" />
+      <Polygon layoutX="198.0" layoutY="209.0" rotate="90.0" scaleX="0.2" scaleY="0.15" stroke="BLACK" strokeType="INSIDE" AnchorPane.bottomAnchor="151.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="272.0" AnchorPane.topAnchor="149.0">
+        <points>
+          <Double fx:value="-50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="50.0" />
+          <Double fx:value="40.0" />
+          <Double fx:value="0.0" />
+          <Double fx:value="-60.0" />
+        </points>
+      </Polygon>
+      <Polygon layoutX="322.0" layoutY="211.0" rotate="-90.0" scaleX="0.2" scaleY="0.15" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Line endX="-180.0" layoutX="401.0" layoutY="282.0" rotate="90.0" startX="-100.0" />
+      <Line endX="-180.0" layoutX="402.0" layoutY="118.0" rotate="90.0" startX="-100.0" />
+      <Polygon layoutX="261.0" layoutY="340.0" rotate="180.0" scaleX="0.2" scaleY="0.15" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Polygon layoutX="262.0" layoutY="80.0" scaleX="0.2" scaleY="0.15" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Line fx:id="line_tracejada_1" endX="160.0" fill="BLACK" layoutX="215.0" layoutY="160.0" startX="99.0" />
+      <Button fx:id="btnLogin" layoutX="238.0" layoutY="338.0" mnemonicParsing="false" text="Login" />
+      <Button fx:id="btnCancelar" layoutX="232.0" layoutY="38.0" mnemonicParsing="false" text="Cancelar" />
+      <Label layoutX="14.0" layoutY="172.0" text="Aluno:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="345.0" layoutY="174.0" text="Ano:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="180.0" layoutY="162.0" text="N">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="319.0" layoutY="162.0" text="N">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="261.0" layoutY="282.0" text="P">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAluno" layoutX="54.0" layoutY="171.0" prefHeight="25.0" prefWidth="126.0" promptText="Fulano da Silva" />
+      <TextField fx:id="txtSerie" layoutX="376.0" layoutY="171.0" prefHeight="25.0" prefWidth="91.0" promptText="Ex: 3 Ano" />
+      <Line endX="210.0" fill="BLACK" layoutX="152.0" layoutY="126.0" rotate="-37.0" startX="99.0" />
+      <Line fx:id="line_tracejada_2" endX="180.0" fill="BLACK" layoutX="238.0" layoutY="118.0" rotate="90.0" startX="94.0" />
+      <Polygon layoutX="360.0" layoutY="97.0" rotate="45.0" scaleX="0.2" scaleY="0.15" stroke="BLACK" strokeType="INSIDE">
+         <points>
+            <Double fx:value="-50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="50.0" />
+            <Double fx:value="40.0" />
+            <Double fx:value="0.0" />
+            <Double fx:value="-60.0" />
+         </points>
+      </Polygon>
+      <Line fx:id="line_tracejada_3" endX="193.0" fill="BLACK" layoutX="182.0" layoutY="73.0" startX="88.0" />
+      <Ellipse fill="WHITE" layoutX="319.0" layoutY="142.0" radiusX="5.0" radiusY="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="106.0" layoutX="216.0" layoutY="142.0" startX="100.0" />
+      <Arc fill="WHITE" layoutX="285.0" layoutY="162.0" length="100.0" radiusX="10.0" radiusY="20.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
